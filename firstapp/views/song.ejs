@@ -1,0 +1,85 @@
+
+<style>
+    body {
+      background-image: url('https://wallpapercave.com/wp/wp3544135.jpg');
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+      padding-top: 100px;
+    }
+  
+    h1 {
+      font-size: 60px;
+      margin-bottom: 50px;
+      text-shadow: 2px 2px 5px black;
+    }
+  
+    form {
+      display: inline-block;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+  
+    label {
+      display: block;
+      font-size: 32px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 5px black;
+    }
+  
+    input[type="text"] {
+      font-size: 24px;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      margin-bottom: 30px;
+      width: 400px;
+    }
+  
+    input[type="submit"] {
+      font-size: 28px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: none;
+      background-color: rgb(62, 6, 102);
+      color: #fff;
+      cursor: pointer;
+      text-shadow: 2px 2px 5px black;
+    }
+  
+    input[type="submit"]:hover {
+      background-color: rgb(94, 16, 143);
+    }
+  
+    h2 {
+      font-size: 48px;
+      margin-top: 50px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 5px black;
+    }
+  
+    p {
+      font-size: 32px;
+      line-height: 1.5;
+      margin-bottom: 50px;
+      text-shadow: 2px 2px 5px black;
+    }
+  </style>
+  <head>
+    <title>BTS Song Summarizer</title>
+  </head>
+  <body>
+    <h1>BTS Song Summarizer</h1>
+    <form action="/index/song" method="POST">
+      <label for="prompt">Enter the name of a BTS song:</label><br>
+      <input type="text" id="prompt" name="prompt"><br>
+      <input type="submit" value="Summarize">
+    </form>
+    <% if (typeof result !== 'undefined') { %>
+    <h2>Summary:</h2>
+    <p><%= result %></p>
+    <% } %>
+  </body>

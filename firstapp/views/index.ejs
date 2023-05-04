@@ -1,12 +1,59 @@
-
-    <h1>CS103a App</h1>
-    <p class="text-danger">Welcome to the App</p>
-    <!-- Here we show how to encode a URI and get weather data -->
-    <% address = encodeURI("152 Aspinwall Ave, Brookline MA, 02446") %>
-    <a href="https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=<%= address %>&benchmark=2020&format=json"> 
-        get weather</a>
-        <br>
-
-  
+<head>
+    <link rel='stylesheet' href='/stylesheets/index_style.css' />
+    <style>
+        /* Add more styles here */
+        body {
+            background-image: url('https://i.pinimg.com/originals/92/6b/22/926b226a45df49a08c17f1d4dfe98c38.jpg');
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            padding-top: 100px;
+          }
+        .container {
+            width: 70%;
+            margin: 0 auto;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            font-weight: normal;
+            margin-top: 0;
+        }
+        
+        a {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 1rem 2rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
     
-  
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Song Summarizer</h1>
+        <br>
+        <br>
+        <h3>Are you curious about what BTS songs mean? Then ask away!</h3>
+        <a style="border: 2px solid #000;" href="/index/song">Start by entering song name</a>
+        <br>
+        <br>
+        <br>
+        <h3>Don't know any BTS songs? Let me choose for you!</h3>
+        <a style="border: 2px solid #000;" href="/index/random">Random Generator</a>
+    </div>
+</body>
